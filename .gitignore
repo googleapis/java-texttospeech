@@ -42,3 +42,4 @@ api_key
 # Python utilities
 *.pyc
 artman-genfiles
+venv
