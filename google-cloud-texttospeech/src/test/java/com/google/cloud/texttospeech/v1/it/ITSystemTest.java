@@ -22,7 +22,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TextToSpeechTest {
+public class ITSystemTest {
 
   @Test
   public void synthesizeSpeechTest() throws IOException {
