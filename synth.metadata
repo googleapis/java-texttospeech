@@ -1,11 +1,11 @@
 {
-  "updateTime": "2020-04-09T12:01:34.720707Z",
+  "updateTime": "2020-04-09T12:02:28.962821Z",
   "sources": [
     {
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-texttospeech.git",
-        "sha": "4ccfd8c8321e1d49730f863d97a252b8850688a8"
+        "sha": "8fdf2a6a3f1ed047ba39b919340c01276cc6ae3c"
       }
     },
     {
