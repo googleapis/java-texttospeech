@@ -678,6 +678,7 @@ public final class SynthesisInput extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The text.
      */
+    @java.lang.Override
     public java.lang.String getText() {
       java.lang.Object ref = "";
       if (inputSourceCase_ == 1) {
@@ -705,6 +706,7 @@ public final class SynthesisInput extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The bytes for text.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getTextBytes() {
       java.lang.Object ref = "";
       if (inputSourceCase_ == 1) {
@@ -798,6 +800,7 @@ public final class SynthesisInput extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The ssml.
      */
+    @java.lang.Override
     public java.lang.String getSsml() {
       java.lang.Object ref = "";
       if (inputSourceCase_ == 2) {
@@ -828,6 +831,7 @@ public final class SynthesisInput extends com.google.protobuf.GeneratedMessageV3
      *
      * @return The bytes for ssml.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSsmlBytes() {
       java.lang.Object ref = "";
       if (inputSourceCase_ == 2) {
