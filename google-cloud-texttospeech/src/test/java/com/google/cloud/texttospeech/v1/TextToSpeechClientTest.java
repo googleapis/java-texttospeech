@@ -21,6 +21,7 @@ import com.google.api.gax.grpc.testing.LocalChannelProvider;
 import com.google.api.gax.grpc.testing.MockGrpcService;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
+import com.google.api.gax.rpc.HeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.protobuf.AbstractMessage;
 import com.google.protobuf.ByteString;
@@ -28,7 +29,9 @@ import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -157,5 +160,37 @@ public class TextToSpeechClientTest {
     } catch (InvalidArgumentException e) {
       // Expected exception
     }
+  }
+
+  @Test
+  public void quotaProjectIDIntegrationTest() throws IOException {
+    final String QUOTA_PROJECT_ID_KEY = "x-google-user-project";
+    final String QUOTA_PROJECT_ID = "test_quota_project_id";
+    final String QUOTA_PORJECT_ID_HEADER_PROVIDER = "test_quota_project_id_from_header_provider";
+
+    final HeaderProvider headerProvider = new HeaderProvider() {
+      @Override
+      public Map<String, String> getHeaders() {
+        return Collections.singletonMap(QUOTA_PROJECT_ID_KEY, QUOTA_PORJECT_ID_HEADER_PROVIDER);
+      }
+    };
+
+    TextToSpeechSettings settingsWithQuotaOnly = TextToSpeechSettings.newBuilder()
+        .setTransportChannelProvider(channelProvider)
+        .setCredentialsProvider(NoCredentialsProvider.create())
+        .setQuotaProjectId(QUOTA_PROJECT_ID)
+        .build();
+    TextToSpeechClient clientWithQuotaOnly = TextToSpeechClient.create(settingsWithQuotaOnly);
+
+    TextToSpeechSettings settingsWithAllSource = TextToSpeechSettings.newBuilder()
+        .setTransportChannelProvider(channelProvider)
+        .setHeaderProvider(headerProvider)
+        .setQuotaProjectId(QUOTA_PROJECT_ID)
+        .build();
+    TextToSpeechClient clientWithAllSource = TextToSpeechClient.create(settingsWithAllSource);
+
+    Assert.assertEquals(clientWithQuotaOnly.getSettings().getQuotaProjectId(), QUOTA_PROJECT_ID);
+    Assert.assertEquals(clientWithAllSource.getSettings().getHeaderProvider().getHeaders().get(QUOTA_PROJECT_ID_KEY), QUOTA_PORJECT_ID_HEADER_PROVIDER);
+    Assert.assertEquals(clientWithQuotaOnly.getSettings().getQuotaProjectId(), QUOTA_PROJECT_ID);
   }
 }
