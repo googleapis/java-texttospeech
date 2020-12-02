@@ -4,23 +4,23 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-texttospeech.git",
-        "sha": "a05b4a610366fa08afdae481c93c2fd7c4527a9f"
+        "sha": "366c8094335df94acc55110e7a4fa89eed15dcd6"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "9b0c7b1a4665909bd18a0e0fd33004945b5c9c13",
-        "internalRef": "325528080"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "9b0c7b1a4665909bd18a0e0fd33004945b5c9c13",
-        "internalRef": "325528080"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
