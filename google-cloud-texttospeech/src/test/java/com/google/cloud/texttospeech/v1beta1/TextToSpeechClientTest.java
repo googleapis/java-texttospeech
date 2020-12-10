@@ -83,7 +83,7 @@ public class TextToSpeechClientTest {
         ListVoicesResponse.newBuilder().addAllVoices(new ArrayList<Voice>()).build();
     mockTextToSpeech.addResponse(expectedResponse);
 
-    String languageCode = "language_code-412800396";
+    String languageCode = "languageCode-2092349083";
 
     ListVoicesResponse actualResponse = client.listVoices(languageCode);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -105,7 +105,7 @@ public class TextToSpeechClientTest {
     mockTextToSpeech.addException(exception);
 
     try {
-      String languageCode = "language_code-412800396";
+      String languageCode = "languageCode-2092349083";
       client.listVoices(languageCode);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
