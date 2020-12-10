@@ -135,7 +135,7 @@ public class TextToSpeechClient implements BackgroundResource {
   /**
    * Returns a list of Voice supported for synthesis.
    *
-   * @param language_code Optional. Recommended.
+   * @param languageCode Optional. Recommended.
    *     [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If specified, the
    *     ListVoices call will only return voices that can be used to synthesize this language_code.
    *     E.g. when specifying "en-NZ", you will get supported "en-\\&#42;" voices; when specifying
@@ -177,7 +177,7 @@ public class TextToSpeechClient implements BackgroundResource {
    *
    * @param input Required. The Synthesizer requires either plain text or SSML as input.
    * @param voice Required. The desired voice of the synthesized audio.
-   * @param audio_config Required. The configuration of the synthesized audio.
+   * @param audioConfig Required. The configuration of the synthesized audio.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SynthesizeSpeechResponse synthesizeSpeech(
