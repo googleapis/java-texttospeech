@@ -22,13 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Service that implements Google Cloud Text-to-Speech API.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/texttospeech/v1beta1/cloud_tts.proto")
@@ -173,22 +167,10 @@ public final class TextToSpeechGrpc {
     return TextToSpeechFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service that implements Google Cloud Text-to-Speech API.
-   * </pre>
-   */
+  /** */
   public abstract static class TextToSpeechImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of Voice supported for synthesis.
-     * </pre>
-     */
+    /** */
     public void listVoices(
         com.google.cloud.texttospeech.v1beta1.ListVoicesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.texttospeech.v1beta1.ListVoicesResponse>
@@ -196,14 +178,7 @@ public final class TextToSpeechGrpc {
       asyncUnimplementedUnaryCall(getListVoicesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Synthesizes speech synchronously: receive results after all text input
-     * has been processed.
-     * </pre>
-     */
+    /** */
     public void synthesizeSpeech(
         com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse>
@@ -232,13 +207,7 @@ public final class TextToSpeechGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service that implements Google Cloud Text-to-Speech API.
-   * </pre>
-   */
+  /** */
   public static final class TextToSpeechStub
       extends io.grpc.stub.AbstractAsyncStub<TextToSpeechStub> {
     private TextToSpeechStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -250,13 +219,7 @@ public final class TextToSpeechGrpc {
       return new TextToSpeechStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of Voice supported for synthesis.
-     * </pre>
-     */
+    /** */
     public void listVoices(
         com.google.cloud.texttospeech.v1beta1.ListVoicesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.texttospeech.v1beta1.ListVoicesResponse>
@@ -265,14 +228,7 @@ public final class TextToSpeechGrpc {
           getChannel().newCall(getListVoicesMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Synthesizes speech synchronously: receive results after all text input
-     * has been processed.
-     * </pre>
-     */
+    /** */
     public void synthesizeSpeech(
         com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse>
@@ -284,13 +240,7 @@ public final class TextToSpeechGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service that implements Google Cloud Text-to-Speech API.
-   * </pre>
-   */
+  /** */
   public static final class TextToSpeechBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<TextToSpeechBlockingStub> {
     private TextToSpeechBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -303,26 +253,13 @@ public final class TextToSpeechGrpc {
       return new TextToSpeechBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of Voice supported for synthesis.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.texttospeech.v1beta1.ListVoicesResponse listVoices(
         com.google.cloud.texttospeech.v1beta1.ListVoicesRequest request) {
       return blockingUnaryCall(getChannel(), getListVoicesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Synthesizes speech synchronously: receive results after all text input
-     * has been processed.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse synthesizeSpeech(
         com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest request) {
       return blockingUnaryCall(
@@ -330,13 +267,7 @@ public final class TextToSpeechGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service that implements Google Cloud Text-to-Speech API.
-   * </pre>
-   */
+  /** */
   public static final class TextToSpeechFutureStub
       extends io.grpc.stub.AbstractFutureStub<TextToSpeechFutureStub> {
     private TextToSpeechFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -349,13 +280,7 @@ public final class TextToSpeechGrpc {
       return new TextToSpeechFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of Voice supported for synthesis.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.texttospeech.v1beta1.ListVoicesResponse>
         listVoices(com.google.cloud.texttospeech.v1beta1.ListVoicesRequest request) {
@@ -363,14 +288,7 @@ public final class TextToSpeechGrpc {
           getChannel().newCall(getListVoicesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Synthesizes speech synchronously: receive results after all text input
-     * has been processed.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse>
         synthesizeSpeech(com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest request) {
