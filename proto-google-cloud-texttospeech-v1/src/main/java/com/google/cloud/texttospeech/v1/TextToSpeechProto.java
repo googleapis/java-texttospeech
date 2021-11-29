@@ -70,8 +70,7 @@ public final class TextToSpeechProto {
     java.lang.String[] descriptorData = {
       "\n"
           + ",google/cloud/texttospeech/v1/cloud_tts"
-          + ".proto\022\034google.cloud.texttospeech.v1\032\034go"
-          + "ogle/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\"/\n"
+          + ".proto\022\034google.cloud.texttospeech.v1\032\034google/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\"/\n"
           + "\021ListVoicesRequest\022\032\n\r"
           + "language_code\030\001 \001(\tB\003\340A\001\"I\n"
           + "\022ListVoicesResponse\0223\n"
@@ -126,11 +125,9 @@ public final class TextToSpeechProto {
           + "language_code\022\274\001\n"
           + "\020SynthesizeSpeech\0225.google.cloud.texttospeech.v1.SynthesizeSpeechRequest\0326."
           + "google.cloud.texttospeech.v1.SynthesizeS"
-          + "peechResponse\"9\202\323\344\223\002\030\"\023/v1/text:synthesi"
-          + "ze:\001*\332A\030input,voice,audio_config\032O\312A\033texttospeech.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformB\274\002\n"
+          + "peechResponse\"9\202\323\344\223\002\030\"\023/v1/text:synthesize:\001*\332A\030input,voice,audio_config\032O\312A\033texttospeech.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformB\274\002\n"
           + " com.google.cloud.texttospeech.v1B\021TextToSp"
-          + "eechProtoP\001ZHgoogle.golang.org/genproto/googleapis/cloud/texttospeech/v1;texttos"
-          + "peech\370\001\001\252\002\034Google.Cloud.TextToSpeech.V1\312\002\034Google\\Cloud\\TextToSpeech\\V1\352\002\037Google::Cloud::TextToSpeech::V1\352AU\n"
+          + "eechProtoP\001ZHgoogle.golang.org/genproto/googleapis/cloud/texttospeech/v1;texttospeech\370\001\001\252\002\034Google.Cloud.TextToSpeech.V1\312\002\034Google\\Cloud\\TextToSpeech\\V1\352\002\037Google::Cloud::TextToSpeech::V1\352AU\n"
           + "\033automl.googleapis.com/Model\0226projects/{project}/loc"
           + "ations/{location}/models/{model}b\006proto3"
     };
