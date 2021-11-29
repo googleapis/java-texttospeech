@@ -153,10 +153,8 @@ public final class TextToSpeechProto {
           + "ListVoices\0224.google.cloud.texttospeech.v1beta1.ListVoicesRequest\0325.google.cloud.texttospeech.v1beta1.ListVoicesResponse\"\'\202\323\344\223\002\021\022\017/v1beta1/voices\332A\r"
           + "language_code\022\313\001\n"
           + "\020SynthesizeSpeech\022:.google.cloud.texttospeech.v1beta1.SynthesizeSpeechReques"
-          + "t\032;.google.cloud.texttospeech.v1beta1.Sy"
-          + "nthesizeSpeechResponse\">\202\323\344\223\002\035\"\030/v1beta1/text:synthesize:\001*\332A\030input,voice,audio_config\032O\312A\033texttospeech.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformB\325\002\n"
-          + "%com.google.cloud.texttospeech.v1beta1B\021TextToSpeechProtoP\001ZMgoogle.g"
-          + "olang.org/genproto/googleapis/cloud/texttospeech/v1beta1;texttospeech\370\001\001\252\002!Google.Cloud.TextToSpeech.V1Beta1\312\002!Google\\Cloud\\TextToSpeech\\V1beta1\352\002$Google::Cloud::TextToSpeech::V1beta1\352AU\n"
+          + "t\032;.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse\">\202\323\344\223\002\035\"\030/v1beta1/text:synthesize:\001*\332A\030input,voice,audio_config\032O\312A\033texttospeech.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformB\325\002\n"
+          + "%com.google.cloud.texttospeech.v1beta1B\021TextToSpeechProtoP\001ZMgoogle.golang.org/genproto/googleapis/cloud/texttospeech/v1beta1;texttospeech\370\001\001\252\002!Google.Cloud.TextToSpeech.V1Beta1\312\002!Google\\Cloud\\TextToSpeech\\V1beta1\352\002$Google::Cloud::TextToSpeech::V1beta1\352AU\n"
           + "\033automl.googleapis.com/Model\0226projects/{project}/loca"
           + "tions/{location}/models/{model}b\006proto3"
     };
