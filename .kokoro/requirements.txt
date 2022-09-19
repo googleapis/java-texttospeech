@@ -134,10 +134,11 @@ gcp-releasetool==1.8.6 \
     --hash=sha256:42e51ab8e2e789bc8e22a03c09352962cd3452951c801a2230d564816630304a \
     --hash=sha256:a3518b79d1b243c494eac392a01c7fd65187fd6d52602dcab9b529bc934d4da1
     # via -r requirements.in
-google-api-core==2.10.1 \
-    --hash=sha256:92d17123cfe399b5ef7e026c63babf978d8475e1ac877919eb7933e25dea2273 \
-    --hash=sha256:e16c15a11789bc5a3457afb2818a3540a03f341e6e710d7f9bbf6cde2ef4a7c8
+google-api-core==2.8.2 \
+    --hash=sha256:06f7244c640322b508b125903bb5701bebabce8832f85aba9335ec00b3d02edc \
+    --hash=sha256:93c6a91ccac79079ac6bbf8b74ee75db970cc899278b97d53bc012f35908cf50
     # via
+    #   -r requirements.in
     #   google-cloud-core
     #   google-cloud-storage
 google-auth==2.11.0 \
@@ -148,14 +149,18 @@ google-auth==2.11.0 \
     #   google-api-core
     #   google-cloud-core
     #   google-cloud-storage
-google-cloud-core==2.3.2 \
-    --hash=sha256:8417acf6466be2fa85123441696c4badda48db314c607cf1e5d543fa8bdc22fe \
-    --hash=sha256:b9529ee7047fd8d4bf4a2182de619154240df17fbe60ead399078c1ae152af9a
-    # via google-cloud-storage
-google-cloud-storage==2.5.0 \
-    --hash=sha256:19a26c66c317ce542cea0830b7e787e8dac2588b6bfa4d3fd3b871ba16305ab0 \
-    --hash=sha256:382f34b91de2212e3c2e7b40ec079d27ee2e3dbbae99b75b1bcd8c63063ce235
-    # via gcp-docuploader
+google-cloud-core==2.3.1 \
+    --hash=sha256:113ba4f492467d5bd442c8d724c1a25ad7384045c3178369038840ecdd19346c \
+    --hash=sha256:34334359cb04187bdc80ddcf613e462dfd7a3aabbc3fe4d118517ab4b9303d53
+    # via
+    #   -r requirements.in
+    #   google-cloud-storage
+google-cloud-storage==2.0.0 \
+    --hash=sha256:a57a15aead0f9dfbd4381f1bfdbe8bf89818a4bd75bab846cafcefb2db846c47 \
+    --hash=sha256:ec4be60bb223a3a960f0d01697d849b86d91cad815a84915a32ed3635e93a5e7
+    # via
+    #   -r requirements.in
+    #   gcp-docuploader
 google-crc32c==1.5.0 \
     --hash=sha256:024894d9d3cfbc5943f8f230e23950cd4906b2fe004c72e29b209420a1e6b05a \
     --hash=sha256:02c65b9817512edc6a4ae7c7e987fea799d2e0ee40c53ec573a692bee24de876 \
@@ -334,6 +339,7 @@ protobuf==3.20.2 \
     #   gcp-docuploader
     #   gcp-releasetool
     #   google-api-core
+    #   google-cloud-storage
     #   googleapis-common-protos
 pyasn1==0.4.8 \
     --hash=sha256:39c7e2ec30515947ff4e87fb6f456dfc6e84857d34be479c9d4a4ba4bf46aa5d \
