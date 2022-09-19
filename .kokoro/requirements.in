@@ -4,6 +4,7 @@ googleapis-common-protos==1.56.3
 gcp-releasetool==1.8.7
 jeepney==0.7.1
 jinja2==3.0.3
+markupsafe==2.0.1
 keyring==23.4.1
 protobuf==3.19.5
 pyjwt==2.4.0
