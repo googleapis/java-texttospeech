@@ -16,6 +16,7 @@
 set -eo pipefail
 
 # Start the releasetool reporter
+python3 --version
 requirementsFile=$(realpath $(dirname "${BASH_SOURCE[0]}")/../requirements.txt)
 python3 -m pip install --require-hashes -r $requirementsFile
 python3 -m releasetool publish-reporter-script > /tmp/publisher-script; source /tmp/publisher-script
