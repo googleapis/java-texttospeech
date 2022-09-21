@@ -25,6 +25,7 @@ java.common_templates(
     excludes=[
         ".kokoro/release/publish_javadoc.sh",
         ".kokoro/release/publish_javadoc11.sh",
-        ".kokoro/release/stage.sh"
+        ".kokoro/release/stage.sh",
+        "renovate.json"
     ]
 )
