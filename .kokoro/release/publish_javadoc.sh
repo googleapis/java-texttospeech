@@ -29,7 +29,7 @@ pushd $(dirname "$0")/../../
 
 pwd
 # install docuploader package
-python3 -m pip install --require-hashes -r $(dirname "$0")/../requirements.txt
+python3 -m pip install --require-hashes -r .kokoro/requirements.txt
 
 # compile all packages
 mvn clean install -B -q -DskipTests=true
