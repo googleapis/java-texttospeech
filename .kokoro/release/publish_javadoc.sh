@@ -27,6 +27,7 @@ fi
 # work from the git root directory
 pushd $(dirname "$0")/../../
 
+pwd
 # install docuploader package
 python3 -m pip install --require-hashes -r $(dirname "$0")/../requirements.txt
 
