@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.8](https://github.com/googleapis/java-texttospeech/compare/v2.4.7...v2.4.8) (2022-10-03)
+
+
+### Dependencies
+
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.4 ([#788](https://github.com/googleapis/java-texttospeech/issues/788)) ([48a76e5](https://github.com/googleapis/java-texttospeech/commit/48a76e57d1ebfa969c16f24657595df4adeb24d7))
+
 ## [2.4.7](https://github.com/googleapis/java-texttospeech/compare/v2.4.6...v2.4.7) (2022-09-28)
 
 
