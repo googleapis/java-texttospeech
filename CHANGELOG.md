@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.9](https://github.com/googleapis/java-texttospeech/compare/v2.4.8...v2.4.9) (2022-10-05)
+
+
+### Bug Fixes
+
+* update protobuf to v3.21.7 ([30ad379](https://github.com/googleapis/java-texttospeech/commit/30ad379e8bf4d32c3ebccc78abe4d7596243f43e))
+
 ## [2.4.8](https://github.com/googleapis/java-texttospeech/compare/v2.4.7...v2.4.8) (2022-10-03)
 
 
