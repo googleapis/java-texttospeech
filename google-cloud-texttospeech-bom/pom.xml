@@ -57,7 +57,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-texttospeech-v1beta1</artifactId>
-        <version>0.93.9</version><!-- {x-version-update:grpc-google-cloud-texttospeech-v1beta1:current} -->
+        <version>0.94.0</version><!-- {x-version-update:grpc-google-cloud-texttospeech-v1beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
