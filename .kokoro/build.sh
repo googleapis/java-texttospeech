@@ -75,7 +75,7 @@ graalvm)
 #    then
 #      mvn -B ${INTEGRATION_TEST_ARGS} -ntp -Pnative -Penable-integration-tests test
 #      RETURN_CODE=$?
-    branchName = git branch -a --contains ${KOKORO_GITHUB_COMMIT}
+    branchName = ${git branch -a --contains ${KOKORO_GITHUB_COMMIT}}
     if [[ "${branchName}" = "/^check-/" ]]
     then
       echo "HELLOOOOOOOOOOOOOOO"
