@@ -75,11 +75,8 @@ graalvm)
 #    then
 #      mvn -B ${INTEGRATION_TEST_ARGS} -ntp -Pnative -Penable-integration-tests test
 #      RETURN_CODE=$?
-    branchName=${git branch -a --contains ${KOKORO_GITHUB_COMMIT}}
-    if [[ "${branchName}" = "/^check-/" ]]
-    then
-      echo "HELLOOOOOOOOOOOOOOO"
-    fi
+    branchName=$(git branch -a --contains ${KOKORO_GITHUB_COMMIT})
+    for i in ${branchName[@]}; do echo $i; done
     ;;
 graalvm17)
     # Run Unit and Integration Tests with Native Image
