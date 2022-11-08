@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.cloud.texttospeech.v1beta1.samples;
+package com.google.cloud.texttospeech.v1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_create_setcredentialsprovider_sync]
+// [START texttospeech_v1_generated_TextToSpeech_Create_SetCredentialsProvider_sync]
 import com.google.api.gax.core.FixedCredentialsProvider;
-import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
-import com.google.cloud.texttospeech.v1beta1.TextToSpeechSettings;
-import com.google.cloud.texttospeech.v1beta1.myCredentials;
+import com.google.cloud.texttospeech.v1.TextToSpeechClient;
+import com.google.cloud.texttospeech.v1.TextToSpeechSettings;
+import com.google.cloud.texttospeech.v1.myCredentials;
 
 public class SyncCreateSetCredentialsProvider {
 
@@ -41,4 +41,4 @@ public class SyncCreateSetCredentialsProvider {
     TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(textToSpeechSettings);
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_create_setcredentialsprovider_sync]
+// [END texttospeech_v1_generated_TextToSpeech_Create_SetCredentialsProvider_sync]

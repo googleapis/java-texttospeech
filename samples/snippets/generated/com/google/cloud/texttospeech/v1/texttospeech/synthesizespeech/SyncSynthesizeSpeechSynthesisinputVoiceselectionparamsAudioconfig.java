@@ -16,39 +16,33 @@
 
 package com.google.cloud.texttospeech.v1.samples;
 
-// [START texttospeech_v1_generated_texttospeechclient_synthesizespeech_async]
-import com.google.api.core.ApiFuture;
+// [START texttospeech_v1_generated_TextToSpeech_SynthesizeSpeech_SynthesisinputVoiceselectionparamsAudioconfig_sync]
 import com.google.cloud.texttospeech.v1.AudioConfig;
 import com.google.cloud.texttospeech.v1.SynthesisInput;
-import com.google.cloud.texttospeech.v1.SynthesizeSpeechRequest;
 import com.google.cloud.texttospeech.v1.SynthesizeSpeechResponse;
 import com.google.cloud.texttospeech.v1.TextToSpeechClient;
 import com.google.cloud.texttospeech.v1.VoiceSelectionParams;
 
-public class AsyncSynthesizeSpeech {
+public class SyncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig {
 
   public static void main(String[] args) throws Exception {
-    asyncSynthesizeSpeech();
+    syncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig();
   }
 
-  public static void asyncSynthesizeSpeech() throws Exception {
+  public static void syncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig()
+      throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
     try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
-      SynthesizeSpeechRequest request =
-          SynthesizeSpeechRequest.newBuilder()
-              .setInput(SynthesisInput.newBuilder().build())
-              .setVoice(VoiceSelectionParams.newBuilder().build())
-              .setAudioConfig(AudioConfig.newBuilder().build())
-              .build();
-      ApiFuture<SynthesizeSpeechResponse> future =
-          textToSpeechClient.synthesizeSpeechCallable().futureCall(request);
-      // Do something.
-      SynthesizeSpeechResponse response = future.get();
+      SynthesisInput input = SynthesisInput.newBuilder().build();
+      VoiceSelectionParams voice = VoiceSelectionParams.newBuilder().build();
+      AudioConfig audioConfig = AudioConfig.newBuilder().build();
+      SynthesizeSpeechResponse response =
+          textToSpeechClient.synthesizeSpeech(input, voice, audioConfig);
     }
   }
 }
-// [END texttospeech_v1_generated_texttospeechclient_synthesizespeech_async]
+// [END texttospeech_v1_generated_TextToSpeech_SynthesizeSpeech_SynthesisinputVoiceselectionparamsAudioconfig_sync]

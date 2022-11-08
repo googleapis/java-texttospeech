@@ -16,29 +16,28 @@
 
 package com.google.cloud.texttospeech.v1.samples;
 
-// [START texttospeech_v1_generated_texttospeechclient_create_setcredentialsprovider_sync]
-import com.google.api.gax.core.FixedCredentialsProvider;
+// [START texttospeech_v1_generated_TextToSpeech_ListVoices_sync]
+import com.google.cloud.texttospeech.v1.ListVoicesRequest;
+import com.google.cloud.texttospeech.v1.ListVoicesResponse;
 import com.google.cloud.texttospeech.v1.TextToSpeechClient;
-import com.google.cloud.texttospeech.v1.TextToSpeechSettings;
-import com.google.cloud.texttospeech.v1.myCredentials;
 
-public class SyncCreateSetCredentialsProvider {
+public class SyncListVoices {
 
   public static void main(String[] args) throws Exception {
-    syncCreateSetCredentialsProvider();
+    syncListVoices();
   }
 
-  public static void syncCreateSetCredentialsProvider() throws Exception {
+  public static void syncListVoices() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-    TextToSpeechSettings textToSpeechSettings =
-        TextToSpeechSettings.newBuilder()
-            .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
-            .build();
-    TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(textToSpeechSettings);
+    try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
+      ListVoicesRequest request =
+          ListVoicesRequest.newBuilder().setLanguageCode("languageCode-2092349083").build();
+      ListVoicesResponse response = textToSpeechClient.listVoices(request);
+    }
   }
 }
-// [END texttospeech_v1_generated_texttospeechclient_create_setcredentialsprovider_sync]
+// [END texttospeech_v1_generated_TextToSpeech_ListVoices_sync]

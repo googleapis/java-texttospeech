@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.cloud.texttospeech.v1beta1.samples;
+package com.google.cloud.texttospeech.v1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_listvoices_string_sync]
-import com.google.cloud.texttospeech.v1beta1.ListVoicesResponse;
-import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
+// [START texttospeech_v1_generated_TextToSpeech_ListVoices_String_sync]
+import com.google.cloud.texttospeech.v1.ListVoicesResponse;
+import com.google.cloud.texttospeech.v1.TextToSpeechClient;
 
 public class SyncListVoicesString {
 
@@ -38,4 +38,4 @@ public class SyncListVoicesString {
     }
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_listvoices_string_sync]
+// [END texttospeech_v1_generated_TextToSpeech_ListVoices_String_sync]

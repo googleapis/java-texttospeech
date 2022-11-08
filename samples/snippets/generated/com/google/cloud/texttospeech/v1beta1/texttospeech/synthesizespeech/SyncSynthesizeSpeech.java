@@ -16,8 +16,7 @@
 
 package com.google.cloud.texttospeech.v1beta1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_synthesizespeech_async]
-import com.google.api.core.ApiFuture;
+// [START texttospeech_v1beta1_generated_TextToSpeech_SynthesizeSpeech_sync]
 import com.google.cloud.texttospeech.v1beta1.AudioConfig;
 import com.google.cloud.texttospeech.v1beta1.SynthesisInput;
 import com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest;
@@ -26,13 +25,13 @@ import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
 import com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams;
 import java.util.ArrayList;
 
-public class AsyncSynthesizeSpeech {
+public class SyncSynthesizeSpeech {
 
   public static void main(String[] args) throws Exception {
-    asyncSynthesizeSpeech();
+    syncSynthesizeSpeech();
   }
 
-  public static void asyncSynthesizeSpeech() throws Exception {
+  public static void syncSynthesizeSpeech() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
@@ -46,11 +45,8 @@ public class AsyncSynthesizeSpeech {
               .setAudioConfig(AudioConfig.newBuilder().build())
               .addAllEnableTimePointing(new ArrayList<SynthesizeSpeechRequest.TimepointType>())
               .build();
-      ApiFuture<SynthesizeSpeechResponse> future =
-          textToSpeechClient.synthesizeSpeechCallable().futureCall(request);
-      // Do something.
-      SynthesizeSpeechResponse response = future.get();
+      SynthesizeSpeechResponse response = textToSpeechClient.synthesizeSpeech(request);
     }
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_synthesizespeech_async]
+// [END texttospeech_v1beta1_generated_TextToSpeech_SynthesizeSpeech_sync]

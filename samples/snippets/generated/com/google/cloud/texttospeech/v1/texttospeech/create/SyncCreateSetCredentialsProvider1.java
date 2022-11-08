@@ -16,35 +16,24 @@
 
 package com.google.cloud.texttospeech.v1.samples;
 
-// [START texttospeech_v1_generated_texttospeechclient_synthesizespeech_sync]
-import com.google.cloud.texttospeech.v1.AudioConfig;
-import com.google.cloud.texttospeech.v1.SynthesisInput;
-import com.google.cloud.texttospeech.v1.SynthesizeSpeechRequest;
-import com.google.cloud.texttospeech.v1.SynthesizeSpeechResponse;
+// [START texttospeech_v1_generated_TextToSpeech_Create_SetCredentialsProvider1_sync]
 import com.google.cloud.texttospeech.v1.TextToSpeechClient;
-import com.google.cloud.texttospeech.v1.VoiceSelectionParams;
+import com.google.cloud.texttospeech.v1.TextToSpeechSettings;
 
-public class SyncSynthesizeSpeech {
+public class SyncCreateSetCredentialsProvider1 {
 
   public static void main(String[] args) throws Exception {
-    syncSynthesizeSpeech();
+    syncCreateSetCredentialsProvider1();
   }
 
-  public static void syncSynthesizeSpeech() throws Exception {
+  public static void syncCreateSetCredentialsProvider1() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-    try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
-      SynthesizeSpeechRequest request =
-          SynthesizeSpeechRequest.newBuilder()
-              .setInput(SynthesisInput.newBuilder().build())
-              .setVoice(VoiceSelectionParams.newBuilder().build())
-              .setAudioConfig(AudioConfig.newBuilder().build())
-              .build();
-      SynthesizeSpeechResponse response = textToSpeechClient.synthesizeSpeech(request);
-    }
+    TextToSpeechSettings textToSpeechSettings = TextToSpeechSettings.newHttpJsonBuilder().build();
+    TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(textToSpeechSettings);
   }
 }
-// [END texttospeech_v1_generated_texttospeechclient_synthesizespeech_sync]
+// [END texttospeech_v1_generated_TextToSpeech_Create_SetCredentialsProvider1_sync]

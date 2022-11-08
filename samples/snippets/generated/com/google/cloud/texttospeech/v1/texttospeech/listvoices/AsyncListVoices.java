@@ -16,26 +16,32 @@
 
 package com.google.cloud.texttospeech.v1.samples;
 
-// [START texttospeech_v1_generated_texttospeechclient_create_setendpoint_sync]
+// [START texttospeech_v1_generated_TextToSpeech_ListVoices_async]
+import com.google.api.core.ApiFuture;
+import com.google.cloud.texttospeech.v1.ListVoicesRequest;
+import com.google.cloud.texttospeech.v1.ListVoicesResponse;
 import com.google.cloud.texttospeech.v1.TextToSpeechClient;
-import com.google.cloud.texttospeech.v1.TextToSpeechSettings;
-import com.google.cloud.texttospeech.v1.myEndpoint;
 
-public class SyncCreateSetEndpoint {
+public class AsyncListVoices {
 
   public static void main(String[] args) throws Exception {
-    syncCreateSetEndpoint();
+    asyncListVoices();
   }
 
-  public static void syncCreateSetEndpoint() throws Exception {
+  public static void asyncListVoices() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-    TextToSpeechSettings textToSpeechSettings =
-        TextToSpeechSettings.newBuilder().setEndpoint(myEndpoint).build();
-    TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(textToSpeechSettings);
+    try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
+      ListVoicesRequest request =
+          ListVoicesRequest.newBuilder().setLanguageCode("languageCode-2092349083").build();
+      ApiFuture<ListVoicesResponse> future =
+          textToSpeechClient.listVoicesCallable().futureCall(request);
+      // Do something.
+      ListVoicesResponse response = future.get();
+    }
   }
 }
-// [END texttospeech_v1_generated_texttospeechclient_create_setendpoint_sync]
+// [END texttospeech_v1_generated_TextToSpeech_ListVoices_async]

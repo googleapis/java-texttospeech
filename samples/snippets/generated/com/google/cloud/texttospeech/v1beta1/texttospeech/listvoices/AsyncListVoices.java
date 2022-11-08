@@ -16,7 +16,7 @@
 
 package com.google.cloud.texttospeech.v1beta1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_listvoices_async]
+// [START texttospeech_v1beta1_generated_TextToSpeech_ListVoices_async]
 import com.google.api.core.ApiFuture;
 import com.google.cloud.texttospeech.v1beta1.ListVoicesRequest;
 import com.google.cloud.texttospeech.v1beta1.ListVoicesResponse;
@@ -44,4 +44,4 @@ public class AsyncListVoices {
     }
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_listvoices_async]
+// [END texttospeech_v1beta1_generated_TextToSpeech_ListVoices_async]

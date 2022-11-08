@@ -14,30 +14,28 @@
  * limitations under the License.
  */
 
-package com.google.cloud.texttospeech.v1.samples;
+package com.google.cloud.texttospeech.v1beta1.samples;
 
-// [START texttospeech_v1_generated_texttospeechclient_listvoices_sync]
-import com.google.cloud.texttospeech.v1.ListVoicesRequest;
-import com.google.cloud.texttospeech.v1.ListVoicesResponse;
-import com.google.cloud.texttospeech.v1.TextToSpeechClient;
+// [START texttospeech_v1beta1_generated_TextToSpeech_ListVoices_String_sync]
+import com.google.cloud.texttospeech.v1beta1.ListVoicesResponse;
+import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
 
-public class SyncListVoices {
+public class SyncListVoicesString {
 
   public static void main(String[] args) throws Exception {
-    syncListVoices();
+    syncListVoicesString();
   }
 
-  public static void syncListVoices() throws Exception {
+  public static void syncListVoicesString() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
     try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
-      ListVoicesRequest request =
-          ListVoicesRequest.newBuilder().setLanguageCode("languageCode-2092349083").build();
-      ListVoicesResponse response = textToSpeechClient.listVoices(request);
+      String languageCode = "languageCode-2092349083";
+      ListVoicesResponse response = textToSpeechClient.listVoices(languageCode);
     }
   }
 }
-// [END texttospeech_v1_generated_texttospeechclient_listvoices_sync]
+// [END texttospeech_v1beta1_generated_TextToSpeech_ListVoices_String_sync]

@@ -16,28 +16,29 @@
 
 package com.google.cloud.texttospeech.v1beta1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_listvoices_sync]
-import com.google.cloud.texttospeech.v1beta1.ListVoicesRequest;
-import com.google.cloud.texttospeech.v1beta1.ListVoicesResponse;
+// [START texttospeech_v1beta1_generated_TextToSpeech_Create_SetCredentialsProvider_sync]
+import com.google.api.gax.core.FixedCredentialsProvider;
 import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
+import com.google.cloud.texttospeech.v1beta1.TextToSpeechSettings;
+import com.google.cloud.texttospeech.v1beta1.myCredentials;
 
-public class SyncListVoices {
+public class SyncCreateSetCredentialsProvider {
 
   public static void main(String[] args) throws Exception {
-    syncListVoices();
+    syncCreateSetCredentialsProvider();
   }
 
-  public static void syncListVoices() throws Exception {
+  public static void syncCreateSetCredentialsProvider() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-    try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
-      ListVoicesRequest request =
-          ListVoicesRequest.newBuilder().setLanguageCode("languageCode-2092349083").build();
-      ListVoicesResponse response = textToSpeechClient.listVoices(request);
-    }
+    TextToSpeechSettings textToSpeechSettings =
+        TextToSpeechSettings.newBuilder()
+            .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
+            .build();
+    TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(textToSpeechSettings);
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_listvoices_sync]
+// [END texttospeech_v1beta1_generated_TextToSpeech_Create_SetCredentialsProvider_sync]

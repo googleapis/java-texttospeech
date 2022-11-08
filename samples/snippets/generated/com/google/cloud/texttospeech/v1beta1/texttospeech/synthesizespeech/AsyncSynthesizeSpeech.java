@@ -16,33 +16,41 @@
 
 package com.google.cloud.texttospeech.v1beta1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_synthesizespeech_synthesisinputvoiceselectionparamsaudioconfig_sync]
+// [START texttospeech_v1beta1_generated_TextToSpeech_SynthesizeSpeech_async]
+import com.google.api.core.ApiFuture;
 import com.google.cloud.texttospeech.v1beta1.AudioConfig;
 import com.google.cloud.texttospeech.v1beta1.SynthesisInput;
+import com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest;
 import com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse;
 import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
 import com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams;
+import java.util.ArrayList;
 
-public class SyncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig {
+public class AsyncSynthesizeSpeech {
 
   public static void main(String[] args) throws Exception {
-    syncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig();
+    asyncSynthesizeSpeech();
   }
 
-  public static void syncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig()
-      throws Exception {
+  public static void asyncSynthesizeSpeech() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
     try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
-      SynthesisInput input = SynthesisInput.newBuilder().build();
-      VoiceSelectionParams voice = VoiceSelectionParams.newBuilder().build();
-      AudioConfig audioConfig = AudioConfig.newBuilder().build();
-      SynthesizeSpeechResponse response =
-          textToSpeechClient.synthesizeSpeech(input, voice, audioConfig);
+      SynthesizeSpeechRequest request =
+          SynthesizeSpeechRequest.newBuilder()
+              .setInput(SynthesisInput.newBuilder().build())
+              .setVoice(VoiceSelectionParams.newBuilder().build())
+              .setAudioConfig(AudioConfig.newBuilder().build())
+              .addAllEnableTimePointing(new ArrayList<SynthesizeSpeechRequest.TimepointType>())
+              .build();
+      ApiFuture<SynthesizeSpeechResponse> future =
+          textToSpeechClient.synthesizeSpeechCallable().futureCall(request);
+      // Do something.
+      SynthesizeSpeechResponse response = future.get();
     }
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_synthesizespeech_synthesisinputvoiceselectionparamsaudioconfig_sync]
+// [END texttospeech_v1beta1_generated_TextToSpeech_SynthesizeSpeech_async]

@@ -16,37 +16,28 @@
 
 package com.google.cloud.texttospeech.v1beta1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_synthesizespeech_sync]
-import com.google.cloud.texttospeech.v1beta1.AudioConfig;
-import com.google.cloud.texttospeech.v1beta1.SynthesisInput;
-import com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechRequest;
-import com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse;
+// [START texttospeech_v1beta1_generated_TextToSpeech_ListVoices_sync]
+import com.google.cloud.texttospeech.v1beta1.ListVoicesRequest;
+import com.google.cloud.texttospeech.v1beta1.ListVoicesResponse;
 import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
-import com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams;
-import java.util.ArrayList;
 
-public class SyncSynthesizeSpeech {
+public class SyncListVoices {
 
   public static void main(String[] args) throws Exception {
-    syncSynthesizeSpeech();
+    syncListVoices();
   }
 
-  public static void syncSynthesizeSpeech() throws Exception {
+  public static void syncListVoices() throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
     try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
-      SynthesizeSpeechRequest request =
-          SynthesizeSpeechRequest.newBuilder()
-              .setInput(SynthesisInput.newBuilder().build())
-              .setVoice(VoiceSelectionParams.newBuilder().build())
-              .setAudioConfig(AudioConfig.newBuilder().build())
-              .addAllEnableTimePointing(new ArrayList<SynthesizeSpeechRequest.TimepointType>())
-              .build();
-      SynthesizeSpeechResponse response = textToSpeechClient.synthesizeSpeech(request);
+      ListVoicesRequest request =
+          ListVoicesRequest.newBuilder().setLanguageCode("languageCode-2092349083").build();
+      ListVoicesResponse response = textToSpeechClient.listVoices(request);
     }
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_synthesizespeech_sync]
+// [END texttospeech_v1beta1_generated_TextToSpeech_ListVoices_sync]

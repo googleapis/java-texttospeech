@@ -16,26 +16,33 @@
 
 package com.google.cloud.texttospeech.v1beta1.samples;
 
-// [START texttospeech_v1beta1_generated_texttospeechclient_create_setendpoint_sync]
+// [START texttospeech_v1beta1_generated_TextToSpeech_SynthesizeSpeech_SynthesisinputVoiceselectionparamsAudioconfig_sync]
+import com.google.cloud.texttospeech.v1beta1.AudioConfig;
+import com.google.cloud.texttospeech.v1beta1.SynthesisInput;
+import com.google.cloud.texttospeech.v1beta1.SynthesizeSpeechResponse;
 import com.google.cloud.texttospeech.v1beta1.TextToSpeechClient;
-import com.google.cloud.texttospeech.v1beta1.TextToSpeechSettings;
-import com.google.cloud.texttospeech.v1beta1.myEndpoint;
+import com.google.cloud.texttospeech.v1beta1.VoiceSelectionParams;
 
-public class SyncCreateSetEndpoint {
+public class SyncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig {
 
   public static void main(String[] args) throws Exception {
-    syncCreateSetEndpoint();
+    syncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig();
   }
 
-  public static void syncCreateSetEndpoint() throws Exception {
+  public static void syncSynthesizeSpeechSynthesisinputVoiceselectionparamsAudioconfig()
+      throws Exception {
     // This snippet has been automatically generated and should be regarded as a code template only.
     // It will require modifications to work:
     // - It may require correct/in-range values for request initialization.
     // - It may require specifying regional endpoints when creating the service client as shown in
     // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
-    TextToSpeechSettings textToSpeechSettings =
-        TextToSpeechSettings.newBuilder().setEndpoint(myEndpoint).build();
-    TextToSpeechClient textToSpeechClient = TextToSpeechClient.create(textToSpeechSettings);
+    try (TextToSpeechClient textToSpeechClient = TextToSpeechClient.create()) {
+      SynthesisInput input = SynthesisInput.newBuilder().build();
+      VoiceSelectionParams voice = VoiceSelectionParams.newBuilder().build();
+      AudioConfig audioConfig = AudioConfig.newBuilder().build();
+      SynthesizeSpeechResponse response =
+          textToSpeechClient.synthesizeSpeech(input, voice, audioConfig);
+    }
   }
 }
-// [END texttospeech_v1beta1_generated_texttospeechclient_create_setendpoint_sync]
+// [END texttospeech_v1beta1_generated_TextToSpeech_SynthesizeSpeech_SynthesisinputVoiceselectionparamsAudioconfig_sync]
