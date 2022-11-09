@@ -76,6 +76,7 @@ graalvm)
 #      mvn -B ${INTEGRATION_TEST_ARGS} -ntp -Pnative -Penable-integration-tests test
 #      RETURN_CODE=$?
     branchName=$(git rev-parse --abbrev-ref HEAD)
+    printf $branchName
     if [[ "$branchName" = check* ]]
     then
       printf "Branch name starts with check-"
