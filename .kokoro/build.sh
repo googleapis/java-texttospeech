@@ -75,7 +75,7 @@ graalvm)
 #    then
 #      mvn -B ${INTEGRATION_TEST_ARGS} -ntp -Pnative -Penable-integration-tests test
 #      RETURN_CODE=$?
-    branchName=$(git branch | sed -n '1{s/^* *//;p}')
+    branchName=$(gh pr checkout 813)
     printf $branchName
     if [[ "$branchName" = check* ]]
     then
