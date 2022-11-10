@@ -88,12 +88,12 @@ graalvm)
 #      exit 0
 #      ;;
 #    esac
-#    
+#
     CURRENT_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
     echo "Current branch: ${CURRENT_BRANCH}"
     ANOTHER_CURRENT=$(git rev-parse --abbrev-ref HEAD)
     echo "Another current branch: ${ANOTHER_CURRENT}"
-
+    git branch
     ;;
 graalvm17)
     # Run Unit and Integration Tests with Native Image
