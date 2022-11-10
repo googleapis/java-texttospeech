@@ -79,11 +79,8 @@ graalvm)
     BRANCH="$(git branch --no-color --contains "$(git rev-parse HEAD)" | grep -v 'HEAD detached' || exit 0)"
     BRANCH="${BRANCH/  /}"
     readonly BRANCH
-    printf ${BRANCH}
-    printf "${BRANCH:-}"
-
     case "${BRANCH:-}" in
-    check-kokoro)
+    "check-*")
       ;;
     *)
       # For now, only generate documentation on pushes to `master`.
