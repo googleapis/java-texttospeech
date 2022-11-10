@@ -75,9 +75,10 @@ graalvm)
 #    then
 #      mvn -B ${INTEGRATION_TEST_ARGS} -ntp -Pnative -Penable-integration-tests test
 #      RETURN_CODE=$?
-    branchName=$(git name-rev 9188d10f710ce97b884dc8c805002ded08144e70)
-    printf $branchName
-    if [[ "$branchName" = check* ]]
+#    branchName=$(git name-rev 9188d10f710ce97b884dc8c805002ded08144e70)
+    BRANCH="$(git branch --no-color --contains "$(git rev-parse HEAD)" | grep -v 'HEAD detached' || exit 0)"
+    printf $BRANCH
+    if [[ "$BRANCH" = check* ]]
     then
       printf "Branch name starts with check-"
     fi
