@@ -76,18 +76,19 @@ graalvm)
 #      mvn -B ${INTEGRATION_TEST_ARGS} -ntp -Pnative -Penable-integration-tests test
 #      RETURN_CODE=$?
 #    branchName=$(git name-rev 9188d10f710ce97b884dc8c805002ded08144e70)
-    BRANCH="$(git branch --no-color --contains "$(git rev-parse HEAD)" | grep -v 'HEAD detached' || exit 0)"
-    BRANCH="${BRANCH/  /}"
-    readonly BRANCH
-    case "${BRANCH:-}" in
-    "check-*")
-      ;;
-    *)
-      # For now, only generate documentation on pushes to `master`.
-      echo "The branch name is NOT check-kokoro."
-      exit 0
-      ;;
-    esac
+#    BRANCH="$(git branch --no-color --contains "$(git rev-parse HEAD)" | grep -v 'HEAD detached' || exit 0)"
+#    BRANCH="${BRANCH/  /}"
+#    readonly BRANCH
+#    case "${BRANCH:-}" in
+#    "check-kokoro")
+#      ;;
+#    *)
+#      # For now, only generate documentation on pushes to `master`.
+#      echo "The branch name is NOT check-kokoro."
+#      exit 0
+#      ;;
+#    esac
+#    
     CURRENT_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
     echo "Current branch: ${CURRENT_BRANCH}"
     ANOTHER_CURRENT=$(git rev-parse --abbrev-ref HEAD)
