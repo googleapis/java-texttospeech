@@ -80,14 +80,19 @@ graalvm)
     BRANCH="${BRANCH/  /}"
     readonly BRANCH
     case "${BRANCH:-}" in
-    "check2-*")
+    "check-*")
       ;;
     *)
       # For now, only generate documentation on pushes to `master`.
-      echo "The branch name is check-kokoro."
+      echo "The branch name is NOT check-kokoro."
       exit 0
       ;;
     esac
+    CURRENT_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
+    echo "Current branch: ${CURRENT_BRANCH}"
+    ANOTHER_CURRENT=$(git rev-parse --abbrev-ref HEAD)
+    echo "Another current branch: ${ANOTHER_CURRENT}"
+
     ;;
 graalvm17)
     # Run Unit and Integration Tests with Native Image
