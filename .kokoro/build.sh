@@ -80,7 +80,7 @@ graalvm)
     BRANCH="${BRANCH/  /}"
     readonly BRANCH
     case "${BRANCH:-}" in
-    "check-*")
+    "check2-*")
       ;;
     *)
       # For now, only generate documentation on pushes to `master`.
