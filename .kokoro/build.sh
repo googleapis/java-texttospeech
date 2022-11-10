@@ -83,7 +83,7 @@ graalvm)
     printf "${BRANCH:-}"
 
     case "${BRANCH:-}" in
-    check-*)
+    check-kokoro)
       ;;
     *)
       # For now, only generate documentation on pushes to `master`.
