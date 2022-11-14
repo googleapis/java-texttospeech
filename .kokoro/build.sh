@@ -94,6 +94,7 @@ graalvm)
     ANOTHER_CURRENT=$(git rev-parse --abbrev-ref HEAD)
     echo "Another current branch: ${ANOTHER_CURRENT}"
     git branch
+    printenv
     ;;
 graalvm17)
     # Run Unit and Integration Tests with Native Image
