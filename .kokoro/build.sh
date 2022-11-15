@@ -89,7 +89,7 @@ graalvm)
 #      ;;
 #    esac
 #
-    branchName=$(git name-rev 9188d10f710ce97b884dc8c805002ded08144e70)
+    branchName=$(git name-rev $KOKORO_GIT_COMMIT)
     echo $branchName
     CURRENT_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
     echo "Current branch: ${CURRENT_BRANCH}"
