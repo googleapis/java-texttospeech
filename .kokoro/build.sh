@@ -91,16 +91,10 @@ graalvm)
 #
     branchName=$(git name-rev $KOKORO_GIT_COMMIT | sed 's/.* //')
     if [[ "${branchName}" == *"check-kokoro"* ]]; then
-      echo "branch name is check-kokoro"
+       # Run Unit and Integration Tests with Native Image
+      mvn -B ${INTEGRATION_TEST_ARGS} -ntp -Pnative -Penable-integration-tests test
+      RETURN_CODE=$?
     fi
-
-    echo $branchName
-    CURRENT_BRANCH=$(git branch | grep \* | cut -d ' ' -f2)
-    echo "Current branch: ${CURRENT_BRANCH}"
-    ANOTHER_CURRENT=$(git rev-parse --abbrev-ref HEAD)
-    echo "Another current branch: ${ANOTHER_CURRENT}"
-    git branch
-    printenv
     ;;
 graalvm17)
     # Run Unit and Integration Tests with Native Image
