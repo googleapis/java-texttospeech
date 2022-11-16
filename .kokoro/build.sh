@@ -90,7 +90,7 @@ graalvm)
 #    esac
 #
     branchName=$(git name-rev $KOKORO_GIT_COMMIT | sed 's/.* //')
-    if [[ "${branchName}" == *"not-check-kokoro"* ]]; then
+    if [[ "${branchName}" == *"check-kokoro"* ]]; then
       echo "branch name is check-kokoro"
     fi
 
