@@ -64,13 +64,13 @@ implementation 'com.google.cloud:google-cloud-texttospeech'
 If you are using Gradle without BOM, add this to your dependencies:
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-texttospeech:2.6.0'
+implementation 'com.google.cloud:google-cloud-texttospeech:2.7.0'
 ```
 
 If you are using SBT, add this to your dependencies:
 
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-texttospeech" % "2.6.0"
+libraryDependencies += "com.google.cloud" % "google-cloud-texttospeech" % "2.7.0"
 ```
 
 ## Authentication
@@ -106,23 +106,6 @@ use this Cloud Text-to-Speech Client Library.
 
 
 
-
-
-## Samples
-
-Samples are in the [`samples/`](https://github.com/googleapis/java-texttospeech/tree/main/samples) directory.
-
-| Sample                      | Source Code                       | Try it |
-| --------------------------- | --------------------------------- | ------ |
-| List All Supported Voices | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/ListAllSupportedVoices.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/ListAllSupportedVoices.java) |
-| List All Supported Voices Beta | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/ListAllSupportedVoicesBeta.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/ListAllSupportedVoicesBeta.java) |
-| Quickstart Sample | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/QuickstartSample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/QuickstartSample.java) |
-| Quickstart Sample Beta | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/QuickstartSampleBeta.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/QuickstartSampleBeta.java) |
-| Ssml Addresses | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/SsmlAddresses.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/SsmlAddresses.java) |
-| Synthesize File | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/SynthesizeFile.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/SynthesizeFile.java) |
-| Synthesize File Beta | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/SynthesizeFileBeta.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/SynthesizeFileBeta.java) |
-| Synthesize Text | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/SynthesizeText.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/SynthesizeText.java) |
-| Synthesize Text Beta | [source code](https://github.com/googleapis/java-texttospeech/blob/main/samples/snippets/src/main/java/com/example/texttospeech/SynthesizeTextBeta.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-texttospeech&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/texttospeech/SynthesizeTextBeta.java) |
 
 
 
